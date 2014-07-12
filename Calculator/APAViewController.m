@@ -14,6 +14,37 @@
 
 @implementation APAViewController
 
+- (APACalculator *)calculator {
+    if (!calculator) {
+        calculator = [[APACalculator alloc] init];
+    }
+    
+    return calculator;
+}
+
+- (IBAction)operationPressed:(UIButton *)sender {
+    if (userStillPressDigit) {
+        [[self calculator] setOperand:[[display text] doubleValue]];
+        userStillPressDigit = NO;
+    }
+    
+    NSString *operation = [[sender titleLabel] text];
+    double result = [[self calculator] perfromOperation:operation];
+    [display setText: [NSString stringWithFormat:@"%g", result]];
+    
+}
+
+- (IBAction)operandPressed:(UIButton *)sender {
+    NSString *digit = [[sender titleLabel] text];
+    
+    if (userStillPressDigit) {
+        [display setText: [[display text] stringByAppendingString:digit]];
+    } else {
+        [display setText:digit];
+        userStillPressDigit = YES;
+    }
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

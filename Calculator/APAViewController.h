@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "APACalculator.h"
 
-@interface APAViewController : UIViewController
+@interface APAViewController : UIViewController {
+    IBOutlet UILabel *display;
+    APACalculator *calculator;
+    BOOL userStillPressDigit;
+}
+
+-(IBAction)operandPressed:(UIButton *)sender;
+-(IBAction)operationPressed:(UIButton *)sender;
 
 @end

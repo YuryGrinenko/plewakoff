@@ -22,6 +22,7 @@
 		ECE690D2196E780D008E51DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE690B1196E780D008E51DE /* UIKit.framework */; };
 		ECE690DA196E780D008E51DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ECE690D8196E780D008E51DE /* InfoPlist.strings */; };
 		ECE690DC196E780D008E51DE /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE690DB196E780D008E51DE /* CalculatorTests.m */; };
+		ECE690E7196E7889008E51DE /* APACalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = ECE690E6196E7889008E51DE /* APACalculator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		ECE690D7196E780D008E51DE /* CalculatorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CalculatorTests-Info.plist"; sourceTree = "<group>"; };
 		ECE690D9196E780D008E51DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		ECE690DB196E780D008E51DE /* CalculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
+		ECE690E5196E7889008E51DE /* APACalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APACalculator.h; sourceTree = "<group>"; };
+		ECE690E6196E7889008E51DE /* APACalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APACalculator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,7 @@
 		ECE690B3196E780D008E51DE /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				ECE690E8196E789A008E51DE /* Model */,
 				ECE690BC196E780D008E51DE /* APAAppDelegate.h */,
 				ECE690BD196E780D008E51DE /* APAAppDelegate.m */,
 				ECE690BF196E780D008E51DE /* Main_iPhone.storyboard */,
@@ -153,6 +157,15 @@
 				ECE690D8196E780D008E51DE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECE690E8196E789A008E51DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ECE690E5196E7889008E51DE /* APACalculator.h */,
+				ECE690E6196E7889008E51DE /* APACalculator.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +269,7 @@
 			files = (
 				ECE690BA196E780D008E51DE /* main.m in Sources */,
 				ECE690C7196E780D008E51DE /* APAViewController.m in Sources */,
+				ECE690E7196E7889008E51DE /* APACalculator.m in Sources */,
 				ECE690BE196E780D008E51DE /* APAAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
