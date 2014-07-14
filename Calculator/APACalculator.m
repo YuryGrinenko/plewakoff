@@ -10,8 +10,12 @@
 
 @implementation APACalculator
 
+#warning Такая логика позволяет выполнить последовательность "8 + -" и результат окажется 16,
+#warning в требованиях говорилось о том, что нельзя вводить две операции подряд
 
 - (void) performWaitingOperation {
+#warning Вынеси знаки операций в отдельное перечисление (enum)
+    
     if ([@"+" isEqual:waitingOperation]) {
         operand = waitingOperand + operand;
     } else if ([@"-" isEqual:waitingOperation]) {
@@ -31,6 +35,7 @@
 
 - (double) perfromOperation:(NSString *)operation {
     if ([operation isEqual:@"sqrt"]) {
+#warning Этот код никогда не выполняется =)
         operand = sqrt(operand);
     } else {
         [self performWaitingOperation];

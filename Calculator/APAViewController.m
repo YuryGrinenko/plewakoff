@@ -14,6 +14,9 @@
 
 @implementation APAViewController
 
+#warning На симуляторе 3.5" не видна кнопка "="
+#warning Нужно добавить кнопку сброса "C"
+
 - (APACalculator *)calculator {
     if (!calculator) {
         calculator = [[APACalculator alloc] init];
@@ -31,6 +34,9 @@
     NSString *operation = [[sender titleLabel] text];
     double result = [[self calculator] perfromOperation:operation];
     [display setText: [NSString stringWithFormat:@"%g", result]];
+    
+#warning Вывод на экран не соответствует требованиям, необходимо выводить всю историю ввода через форматтер, "8 + 8 = 16"
+
     
 }
 

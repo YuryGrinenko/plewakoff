@@ -10,6 +10,10 @@
 #import "APACalculator.h"
 
 @interface APAViewController : UIViewController {
+#warning Все Эти переменные нужно перенести в *.m файл, не стоит их показывать в *.h
+    
+#warning display - не лучшее имя для аутлета UILabel
+
     IBOutlet UILabel *display;
     APACalculator *calculator;
     BOOL userStillPressDigit;

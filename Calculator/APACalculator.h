@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 
 @interface APACalculator : NSObject {
+#warning Это все нужно перенести в *.m файл
+    
+#warning Имена ivar'ов должны начинаться на "_", то есть не operand, а _operand. Вообще лучше использовать @property
+
     double operand;
     NSString *waitingOperation;
     double waitingOperand;
